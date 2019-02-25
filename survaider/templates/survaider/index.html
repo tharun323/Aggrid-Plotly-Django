@@ -1,0 +1,46 @@
+<html>
+<head>
+    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<center><h3 style="padding-top:30px;"><u>Employees DataTable<u></h3></center>
+<div class="container" style="padding-right:50px;">
+<div id="myGrid" style="height: 650px; width:1100px;" class="ag-theme-balham"></div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+    const columnDefs = [
+        {headerName: "Age", field: "age", sortable: true},
+        {headerName: "Fnlwgt", field: "fnlwgt", sortable: true,filter: true},
+        {headerName: "Education", field: "education", sortable: true,filter: true},
+        {headerName: "Education_num", field: "education_num", sortable: true,filter: true},
+        {headerName: "Martial_status", field: "martial_status", sortable: true,filter: true},
+        {headerName: "Occupation", field: "occupation", sortable: true,filter: true},
+        {headerName: "Relationship", field: "relationship", sortable: true,filter: true},
+        { headerName: "Race", field: "race", sortable: true,filter: true},
+        {headerName: "Sex", field: "sex", sortable: true,filter: true},
+        {headerName: "Capital_gain", field: "capital_gain", sortable: true,filter: true},
+        {headerName: "Hours_per_week", field: "hours_per_week", sortable: true,filter: true},
+        {headerName: "Salary", field: "salary", sortable: true,filter: true},
+        {headerName: "Work", field: "work", sortable: true ,filter: true},
+
+
+    ];
+    const gridOptions = {
+        columnDefs: columnDefs,
+        <!--enableSorting: true,-->
+        <!--enableFilter: true-->
+    };
+    const eGridDiv = document.querySelector('#myGrid');
+    new agGrid.Grid(eGridDiv, gridOptions);
+    fetch('http://127.0.0.1:8000/survaider/api/Adultsdata/').then(function (response) {
+        return response.json();
+    }).then(function (data) {
+    console.log(data);
+        gridOptions.api.setRowData(data);
+    })
+</script>
+</body>
