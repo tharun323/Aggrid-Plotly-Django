@@ -20,3 +20,12 @@ Steps to run the web application:
 
 API should be deployed using Zappa + AWS lambda 
 
+
+
+![screenshot 55](https://user-images.githubusercontent.com/37080957/53315944-d5fb5880-38eb-11e9-9f39-93d99a42e91a.png)
+
+
+![screenshot 56](https://user-images.githubusercontent.com/37080957/53315955-de539380-38eb-11e9-98bf-beb8becb1830.png)
+
+
+![screenshot 57](https://user-images.githubusercontent.com/37080957/53315959-e14e8400-38eb-11e9-92b6-727616eab42e.png)
