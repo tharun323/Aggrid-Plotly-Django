@@ -31,14 +31,18 @@
 -In the folder root , create the virtual environment
 
 
--Activate the virtual environment and install the requirements.txt file
+-Activate the virtual environment and install the requirements.txt file , run the migrations 
 
 
 -Run the application using python manage.py runserver
 
+**pointers**:
+
+Please use the local Sqlite database to store the data , since the API is not globally exposed. ( I do not have an AWS account )
+
+Import the dataset csv file into Mysql using the Mysql Workbench 
 
 **API should be deployed using Zappa + AWS lambda**
-
 
 
 ![screenshot 55](https://user-images.githubusercontent.com/37080957/53315944-d5fb5880-38eb-11e9-9f39-93d99a42e91a.png)
