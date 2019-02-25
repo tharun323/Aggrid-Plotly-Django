@@ -18,6 +18,7 @@
 
 -Created Charts in Plotly using JavaScript and using the RestAPI to power the charts
 
+-Cache is implemented using the Djanco cache mechanism and the database is optimised using indexing method.
 
 -Created Aggrid in Javascript and added filters and sorting features to the dataset columns
 
