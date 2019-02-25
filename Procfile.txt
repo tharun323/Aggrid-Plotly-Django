@@ -1,1 +1,1 @@
-web: gunicorn survaider.wsgi
+web: python survaider/manage.py runserver 0.0.0.0:$PORT
